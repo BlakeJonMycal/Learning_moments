@@ -1,6 +1,3 @@
 export const getAllPosts = () => {
-    return fetch(`http://localhost:8088/posts`).then(res => res.json())
-}
-export const getAllTopics = () => {
-    return fetch(`http://localhost:8088/topics`).then(res => res.json())
+    return fetch(`http://localhost:8088/posts?_embed=likedPosts`).then((res) => res.json())
 }
